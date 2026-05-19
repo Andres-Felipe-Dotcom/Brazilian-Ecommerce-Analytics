@@ -29,3 +29,7 @@ LIMIT 5;
 SELECT *
 FROM product_category_name_translation
 LIMIT 5;
+
+SELECT *
+FROM geolocation
+LIMIT 5;
