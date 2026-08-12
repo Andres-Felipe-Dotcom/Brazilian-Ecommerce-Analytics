@@ -1,7 +1,7 @@
 -- Which states generate the most sales revenue?
+
 SELECT
-	
-    c.customer_state,
+	c.customer_state,
     COUNT(DISTINCT o.order_id) AS total_orders,
     ROUND(SUM(oi.price),2) AS total_revenue,
     ROUND(SUM(oi.freight_value),2) AS total_freight    
@@ -14,6 +14,7 @@ ORDER BY total_revenue DESC
 LIMIT 10;
 
 -- Which months generated the highest revenue?
+
 SELECT
     DATE_FORMAT(o.order_purchase_timestamp, '%Y-%m') AS order_month,
     ROUND(SUM(oi.price), 2) AS total_revenue
@@ -24,6 +25,7 @@ GROUP BY order_month
 ORDER BY total_revenue DESC;
 
 -- What is the average order value?
+
 SELECT
 	ROUND(AVG(total_value),2) AS avg_order_value
 FROM (	SELECT
