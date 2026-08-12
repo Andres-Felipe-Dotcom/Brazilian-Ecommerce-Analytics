@@ -1,4 +1,5 @@
 -- Which states  have the most customers?
+
 SELECT
 	customer_state,
     COUNT(DISTINCT customer_unique_id) AS state_customers
@@ -8,6 +9,7 @@ ORDER BY state_customers DESC
 LIMIT 10;
 
 -- Which customers spend the most money?
+
 SELECT 
 	c.customer_unique_id,
     c.customer_state,
