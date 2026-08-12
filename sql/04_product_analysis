@@ -1,6 +1,5 @@
 -- Which categories sell most frequently?
 
-
 SELECT
 	product_category_name,
     COUNT(product_category_name) AS total_sold
